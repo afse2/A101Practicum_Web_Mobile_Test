@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="2" time="247.437">
+    <testcase classname="As a user, I should be able to buy a object without login page" name="User can buy a object without login" time="49.667">
+        <system-out>
+            <![CDATA[Given user navigate base page...............................................passed
+When user click "Giyim & aksesuar", "Kadın İç Giyim" and "Dizaltı Çorap" tab.passed
+And user click 1 object display "siyah" one.................................passed
+And user click Sepete Ekle button, "Sepeti Görüntüle" button , "Sepeti Onayla" button , "ÜYE OLMADAN DEVAM ET" button.passed
+And user displayed mail section on the page and enter a mail address........passed
+And user click Yeni adres oluştur button and displayed "Adres Güncelleme" pop-up on the page.passed
+And user enter "Home" as Adres Başlığı, "Ad" , "Soyad" , "Cep Telefonu", "Adres" and select city, township and district and click KAYDET button.passed
+And user select 1 cargo firm and click Kaydet Ve Devam Et button............passed
+Then user select 2 payment tab and complete order and display payment web page.passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="As a user, I should be able to buy a object without login page on mobile app" name="User can buy a object without login on mobile app" time="197.36">
+        <system-out>
+            <![CDATA[Given user open mobile app..................................................passed
+When user click "GİYİM & AKSESUAR", "Kadın İç Giyim" and "Dizaltı Çorap" tab on mobile app.passed
+And user click object display "Siyah" one on mobile app.....................passed
+And user click "SEPETE EKLE" button, "SEPETE GİT" button , "SEPETİ ONAYLA" button , "ÜYE OLMADAN DEVAM ET" button on mobile app.passed
+And user displayed mail section on the page and enter a mail address on mobile app.passed
+And user click "Yeni adres oluştur" button on mobile app....................passed
+And user enter "Home" as Adres Başlığı, "Ad" , "Soyad" , "Cep Telefonu", "Adres" and select "ADANA" city, "FEKE" township and "KONAKKURAN MAH" district and click KAYDET button on mobile app.passed
+And user select 1 cargo firm and click Kaydet Ve Devam Et button on mobile app.passed
+Then user select 2 payment tab, click "Garanti Pay ile Öde" and complete order and display payment web page on mobile app.passed
+]]>
+        </system-out>
+    </testcase>
+</testsuite>

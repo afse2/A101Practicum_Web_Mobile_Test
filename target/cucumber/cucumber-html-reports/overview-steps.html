@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.tablesorter.min.js"></script>
+<script src="js/Chart.min.js"></script>
+<script src="js/moment.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"/>
+<link rel="stylesheet" href="css/cucumber.css" type="text/css"/>
+<link rel="stylesheet" href="css/font-awesome.min.css"/>
+<link rel="shortcut icon" href="images/favicon.png"/>
+
+<script>
+$(document).ready(function() {
+    // this will tell tablesorter to try looking for the data-value attribute
+    // if present, it'll sort by that instead
+    // otherwise, it'll sort by the text content of the table cell
+    $("#tablesorter").tablesorter({
+        textAttribute: 'data-value',
+        // ignores the first row of the header, the 'scenario', 'steps', since
+        // sorting those doesn't make sense
+        selectorHeaders: '> thead tr:not(.dont-sort) th',
+        // use a stable sort
+        sortStable: true
+    });
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+<title>Cucumber Reports  - Steps Overview</title>
+
+</head>
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navigation">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse">
+      <p class="navbar-text navbar-left">Cucumber Report</p>
+      <ul class="nav navbar-nav navbar-right">
+        <li role="presentation" ><a href="overview-features.html">Features</a></li>
+        <li role="presentation" ><a href="overview-tags.html">Tags</a></li>
+        <li role="presentation"     class="active" ><a href="overview-steps.html">Steps</a></li>
+        <li role="presentation" ><a href="overview-failures.html">Failures</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container-fluid">
+  <div class="col-md-5 col-md-offset-1">
+
+<table class="table table-bordered" id="build-info">
+  <thead>
+    <tr>
+      <th>Project</th>
+      <th>Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="info">
+      <td>No Name (add projectName to cucumber-reporting.properties)</td>
+      <td>01 Oct 2022, 17:01</td>
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+  <div class="col-md-3 col-md-offset-2">
+  </div>
+</div>
+
+
+<div id="report-lead" class="container-fluid">
+  <div class="col-md-10 col-md-offset-1">
+    <h2>Steps Statistics</h2>
+      <p>The following graph shows step statistics for this build. Below list is based on results.
+ step does not provide information about result then is not listed below.
+ Additionally @Before and @After are not counted because they are part of the scenarios, not steps.</p>
+  </div>
+</div>
+
+<div class="container-fluid" id="report">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <table id="tablesorter" class="stats-table table-hover">
+
+        <thead>
+          <tr class="header">
+            <th>Implementation</th>
+            <th>Occurrences</th>
+            <th>Average duration</th>
+            <th>Max duration</th>
+            <th>Total durations</th>
+            <th>Ratio</th>
+          </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+              <td class="location">com.A101.step_definitions.FirstCase.userSelectCargoFirmAndClickKaydetVeDevamEtButton(int)</td>
+              <td>1</td>
+              <td class="duration" data-value="1449852500">1.449</td>
+              <td class="duration" data-value="1449852500">1.449</td>
+              <td class="duration" data-value="1449852500">1.449</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.A101.step_definitions.FirstCase.userSelectPaymentTabAndClickButtonAndDisplayPaymentWebPage(int)</td>
+              <td>1</td>
+              <td class="duration" data-value="6760119700">6.760</td>
+              <td class="duration" data-value="6760119700">6.760</td>
+              <td class="duration" data-value="6760119700">6.760</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.A101.step_definitions.FirstCase.user_click_and_tab(java.lang.String,java.lang.String,java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="9393285300">9.393</td>
+              <td class="duration" data-value="9393285300">9.393</td>
+              <td class="duration" data-value="9393285300">9.393</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.A101.step_definitions.FirstCase.user_click_button(java.lang.String,java.lang.String,java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="6315892700">6.315</td>
+              <td class="duration" data-value="6315892700">6.315</td>
+              <td class="duration" data-value="6315892700">6.315</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.A101.step_definitions.FirstCase.user_click_button_and_displayed_pop_up_on_the_page(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="2867486400">2.867</td>
+              <td class="duration" data-value="2867486400">2.867</td>
+              <td class="duration" data-value="2867486400">2.867</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.A101.step_definitions.FirstCase.user_click_object_display_one(java.lang.Integer,java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="5184319900">5.184</td>
+              <td class="duration" data-value="5184319900">5.184</td>
+              <td class="duration" data-value="5184319900">5.184</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.A101.step_definitions.FirstCase.user_displayed_mail_section_on_the_page_and_enter_a_mail_address()</td>
+              <td>1</td>
+              <td class="duration" data-value="702958800">0.702</td>
+              <td class="duration" data-value="702958800">0.702</td>
+              <td class="duration" data-value="702958800">0.702</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.A101.step_definitions.FirstCase.user_enter_and_select_city_district_and_quarter_and_click_button(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="3523579000">3.523</td>
+              <td class="duration" data-value="3523579000">3.523</td>
+              <td class="duration" data-value="3523579000">3.523</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.A101.step_definitions.FirstCase.user_navigate_base_page()</td>
+              <td>1</td>
+              <td class="duration" data-value="13142401100">13.142</td>
+              <td class="duration" data-value="13142401100">13.142</td>
+              <td class="duration" data-value="13142401100">13.142</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.A101.step_definitions.FirstCaseMobile.userClickAndTabOnMobileApp(java.lang.String,java.lang.String,java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="11163326600">11.163</td>
+              <td class="duration" data-value="11163326600">11.163</td>
+              <td class="duration" data-value="11163326600">11.163</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.A101.step_definitions.FirstCaseMobile.userClickObjectDisplayOneOnMobileApp(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="21068055600">21.068</td>
+              <td class="duration" data-value="21068055600">21.068</td>
+              <td class="duration" data-value="21068055600">21.068</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.A101.step_definitions.FirstCaseMobile.userClickSepeteEkleButtonButtonButtonButtonOnMobileApp(java.lang.String,java.lang.String,java.lang.String,java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="43467778800">43.467</td>
+              <td class="duration" data-value="43467778800">43.467</td>
+              <td class="duration" data-value="43467778800">43.467</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.A101.step_definitions.FirstCaseMobile.userClickYeniAdresOlusturButtonAndDisplayedPopUpOnThePageOnMobileApp(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="8448488500">8.448</td>
+              <td class="duration" data-value="8448488500">8.448</td>
+              <td class="duration" data-value="8448488500">8.448</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.A101.step_definitions.FirstCaseMobile.userDisplayedMailSectionOnThePageAndEnterAMailAddressOnMobileApp()</td>
+              <td>1</td>
+              <td class="duration" data-value="13890763000">13.890</td>
+              <td class="duration" data-value="13890763000">13.890</td>
+              <td class="duration" data-value="13890763000">13.890</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.A101.step_definitions.FirstCaseMobile.userEnterAsAdresBasligiAndSelectCityTownshipAndDistrictAndClickKAYDETButtonOnMobileApp(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="32553520100">32.553</td>
+              <td class="duration" data-value="32553520100">32.553</td>
+              <td class="duration" data-value="32553520100">32.553</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.A101.step_definitions.FirstCaseMobile.userSelectCargoFirmAndClickKaydetVeDevamEtButtonOnMobileApp(int)</td>
+              <td>1</td>
+              <td class="duration" data-value="1591873800">1.591</td>
+              <td class="duration" data-value="1591873800">1.591</td>
+              <td class="duration" data-value="1591873800">1.591</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.A101.step_definitions.FirstCaseMobile.userSelectPaymentTabAndCompleteOrderAndDisplayPaymentWebPageOnMobileApp(int,java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="12496281600">12.496</td>
+              <td class="duration" data-value="12496281600">12.496</td>
+              <td class="duration" data-value="12496281600">12.496</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.A101.step_definitions.FirstCaseMobile.user_open_mobile_app()</td>
+              <td>1</td>
+              <td class="duration" data-value="52425540500">52.425</td>
+              <td class="duration" data-value="52425540500">52.425</td>
+              <td class="duration" data-value="52425540500">52.425</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.A101.step_definitions.Hooks.teardownScenario(io.cucumber.java.Scenario)</td>
+              <td>2</td>
+              <td class="duration" data-value="254192500">0.254</td>
+              <td class="duration" data-value="254192500">0.274</td>
+              <td class="duration" data-value="508385000">0.508</td>
+              <td class="passed">100.00%</td>
+            </tr>
+        </tbody>
+
+        <tfoot class="total">
+          <tr>
+            <td>19</td>
+            <td>20</td>
+            <td class="duration">12.347</td>
+            <td class="duration">52.425</td>
+            <td class="duration">4:6.953</td>
+            <td>Totals</td>
+          </tr>
+        </tfoot>
+
+      </table>
+    </div>
+  </div>
+</div>
+
+
+<nav class="navbar navbar-default" id="footer">
+  <div class="container-fluid">
+    <p class="navbar-text navbar-right">
+        <small>generate Cucumber HTML reports via:&nbsp;</small>
+        <a class="navbar-link" href="https://github.com/jenkinsci/cucumber-reports-plugin">Jenkins Plugin</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-reporting">Standalone</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-sandwich">Sandwich</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/maven-cucumber-reporting">Maven</a>
+        &nbsp;&nbsp;
+    </p>
+  </div>
+</nav>
+
+</body>
+</html>
